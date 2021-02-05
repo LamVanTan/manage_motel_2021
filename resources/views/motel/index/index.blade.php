@@ -1,4 +1,4 @@
-{{-- @extends('templates.motel.master')
+@extends('templates.motel.master')
 @section('main-content')
 <!-- @php 
 	  if(Session::has('msg')){
@@ -19,7 +19,7 @@
     </section>
     <!-- END section -->
 
-    <section class="site-section bg-light pt-4">
+    {{-- <section class="site-section bg-light pt-4">
       <div class="container">
         <div class="row align-items-center">
           @foreach($getListRooms as $itemRooms)
@@ -67,7 +67,7 @@
           
         </div>
       </div>
-    </section>
+    </section> --}}
   <script>
     var myVar = setInterval(myTimer, 1000);
     function myTimer() {
@@ -78,4 +78,4 @@
 
   </script>
     <!-- END section -->
-@endsection --}}
+@endsection
