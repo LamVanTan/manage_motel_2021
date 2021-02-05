@@ -23,8 +23,8 @@ class CreateKhachHangTable extends Migration
             $table->integer('identity_number');
             $table->date('ngayCap');
             $table->string('noiCap');
-            $table->string('email')->unique();
-            $table->integer('Id_user')->unsigned();
+            $table->string('email')->unique()->nullable();
+            $table->integer('Id_user')->unsigned()->nullable();
             $table->foreign('Id_user')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
             $table->integer('MaTaiKhoan')->unsigned();
             $table->foreign('MaTaiKhoan')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
