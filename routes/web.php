@@ -6,11 +6,11 @@ Route::pattern('slug','(.*)');
 Route::pattern('id','([0-9]*)');
 
 Route::get('', 'Motel\indexController@index')->name('motel.index.index');
-// Route::post('time-pin-rooms','Motel\indexController@timePinRooms')->name('motel.room.timePinRooms');
-// Route::get('/recharge', 'Payment\RechargeController@recharge')->name('motel.room.recharge');
-// Route::post('/recharge', 'Payment\RechargeController@ajaxRecharge')->name('motel.room.recharge');
-// Route::get('/detail-room/{slug}-{idRoom}', 'Motel\DetailRoomController@detailRoom')->name('motel.room.detail');
-// Route::get('/customer', 'Motel\CustomerController@index')->name('motel.customer.index');
+Route::post('time-pin-rooms','Motel\indexController@timePinRooms')->name('motel.room.timePinRooms');
+Route::get('/recharge', 'Payment\RechargeController@recharge')->name('motel.room.recharge');
+Route::post('/recharge', 'Payment\RechargeController@ajaxRecharge')->name('motel.room.recharge');
+Route::get('/detail-room/{slug}-{idRoom}', 'Motel\DetailRoomController@detailRoom')->name('motel.room.detail');
+Route::get('/customer', 'Motel\CustomerController@index')->name('motel.customer.index');
 // Route::get('/book-room/{idRoom}', 'Motel\BookRoomController@bookRoom')->name('motel.room.book_room');
 // Route::post('/book-room/{idRoom}', 'Motel\BookRoomController@postBookRoom')->name('motel.room.book_room');
 // Route::post('/serviceUpdateAjax', 'Motel\BookRoomController@serviceUpdateAjax')->name('motel.room.serviceUpdateAjax');
