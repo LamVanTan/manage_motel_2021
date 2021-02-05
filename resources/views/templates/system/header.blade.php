@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>
+    Quản lý hệ thống
+  </title>
+  <!-- Favicon -->
+  
+  <link href="http://localhost/Motel/public/templates/admin/img/brand/favicon.ico" rel="icon" type="image/png">
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+  <!-- Icons -->
+  <link href="http://localhost/Motel/public/templates/admin/js/plugins/nucleo/css/nucleo.css" rel="stylesheet" />
+  <link href="http://localhost/Motel/public/templates/admin/js/plugins/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet" />
+  <!-- CSS Files -->
+  <link href="http://localhost/Motel/public/templates/admin/css/argon-dashboard.css?v=1.1.2" rel="stylesheet" />
+  <link href="http://localhost/Motel/public/templates/admin/css/customs.css" rel="stylesheet" />
+  <link href="http://localhost/Motel/public/templates/admin/css/fileupload.css" rel="stylesheet" />
+  {{-- ChartScript --}}
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+  <script src="https://code.highcharts.com/modules/data.js"></script>
+  <script src="https://code.highcharts.com/modules/exporting.js"></script>
+  <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
+<style>
+  #container {
+      height: 400px;
+  }
+
+  .highcharts-figure, .highcharts-data-table table {
+      min-width: 310px;
+      max-width: 800px;
+      margin: 1em auto;
+  }
+
+  #datatable {
+      font-family: Verdana, sans-serif;
+      border-collapse: collapse;
+      border: 1px solid #EBEBEB;
+      margin: 10px auto;
+      text-align: center;
+      width: 100%;
+      max-width: 500px;
+  }
+  #datatable caption {
+      padding: 1em 0;
+      font-size: 1.2em;
+      color: #555;
+  }
+  #datatable th {
+    font-weight: 600;
+      padding: 0.5em;
+  }
+  #datatable td, #datatable th, #datatable caption {
+      padding: 0.5em;
+  }
+  #datatable thead tr, #datatable tr:nth-child(even) {
+      background: #f8f8f8;
+  }
+  #datatable tr:hover {
+      background: #f1f7ff;
+  }
+</style>
+</head>
+
+<body class="">
+  <nav class="navbar navbar-vertical fixed-left navbar-expand-md navbar-light bg-white" id="sidenav-main">
+    <div class="container-fluid">
+      <!-- Toggler -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#sidenav-collapse-main" aria-controls="sidenav-main" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- Brand -->
+      <a class="navbar-brand pt-0" href="http://localhost/Motel/public/templates/admin/index.html">
+        <img src="http://localhost/Motel/public/templates/admin/img/brand/blue.png" class="navbar-brand-img" alt="...">
+        <b style="display: block;color:slateblue;font-size:14px">Nơi dừng chân lý tưởng</b>
+      </a>
+    
+      <!-- leftbar -->
+      @include('templates.system.leftbar')
+      {{-- </div> --}}
+    </div>
+  </nav>
+  <div class="main-content">
+    <!-- Navbar -->
+    <nav class="navbar navbar-top navbar-expand-md navbar-dark" id="navbar-main">
+      <div class="container-fluid">
+        <!-- Brand -->
+        <a class="h4 mb-0 text-white text-uppercase d-none d-lg-inline-block" href="./index.html">Quản lý hệ thống</a>
+        <!-- Form -->
+        <form class="navbar-search navbar-search-dark form-inline mr-3 d-none d-md-flex ml-lg-auto">
+          <div class="form-group mb-0">
+            <div class="input-group input-group-alternative">
+              <div class="input-group-prepend">
+                <span class="input-group-text"><i class="fas fa-search"></i></span>
+              </div>
+              <input class="form-control" placeholder="Search" type="text">
+            </div>
+          </div>
+        </form>
+        <!-- User -->
+        <ul class="navbar-nav align-items-center d-none d-md-flex">
+          <li class="nav-item dropdown">
+            <a class="nav-link pr-0" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <div class="media align-items-center">
+                <span class="avatar avatar-sm rounded-circle">
+                  <img alt="Image placeholder" src="http://localhost/Motel/public/templates/admin/img/theme/team-4-800x800.jpg">
+                </span>
+                <div class="media-body ml-2 d-none d-lg-block">
+                  <span class="mb-0 text-sm  font-weight-bold">@if(Auth::check()) {{Auth::user()->email}} @endif</span>
+                </div>
+              </div>
+            </a>
+            <div class="dropdown-menu dropdown-menu-arrow dropdown-menu-right">
+              <div class=" dropdown-header noti-title">
+                <h6 class="text-overflow m-0">Chào mừng!</h6>
+              </div>
+              <a href="" class="dropdown-item">
+                <i class="ni ni-support-16"></i>
+                <span>Hỗ trợ</span>
+              </a>
+              <div class="dropdown-divider"></div>
+              <a href="" class="dropdown-item">
+                <i class="ni ni-user-run"></i>
+                <span>Đăng Xuất</span>
+              </a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- End Navbar -->
+    
+    <!-- Header -->
+    <div class="header bg-gradient-primary pb-8 pt-5 pt-md-8">
+      <div class="container-fluid">
+        <div class="header-body">
+          
+          <!-- Card stats -->
+          <div class="row">
+            <div class="col-xl-6 col-lg-6">
+              <div class="card card-stats mb-4 mb-xl-0">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col">
+                      <h5 class="card-title text-uppercase text-muted mb-0">Tổng số người đăng ký hệ thống</h5>
+                      <span class="h3 font-weight-bold mb-0">{{$total_user}}</span>
+                    </div>
+                    <div class="col-auto">
+                      <div class="icon icon-shape bg-danger text-white rounded-circle shadow">
+                        <i class="fas fa-cogs"></i>
+                      </div>
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-xl-6 col-lg-6">
+              <div class="card card-stats mb-4 mb-xl-0">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col">
+                      <h5 class="card-title text-uppercase text-muted mb-0">Tổng Doanh Thu</h5>
+                      <span class="h3 font-weight-bold mb-0">{{number_format($revenueSystem,0,',','.')}} VND</span>
+                    </div>
+                    <div class="col-auto">
+                      <div class="icon icon-shape bg-yellow text-white rounded-circle shadow">
+                        <i class="fas fa-money-bill-wave-alt"></i>
+                      </div>
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+   
+  <div class="container-fluid mt--7">
+  @yield('main-content')
