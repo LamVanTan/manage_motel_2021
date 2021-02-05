@@ -9,24 +9,24 @@
    
     {{-- login --}}
   
-    <link rel="stylesheet" href="http://localhost/Motel/public/templates/login/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="http://localhost/Motel/public/templates/login/css/bootstrap.min.css">
-    <link href="http://localhost/Motel/public/templates/motel/fontawesome/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="/templates/login/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="/templates/login/css/bootstrap.min.css">
+    <link href="/templates/motel/fontawesome/css/all.css" rel="stylesheet">
     <!-- Style -->
-    <link rel="stylesheet" href="http://localhost/Motel/public/templates/login/css/style.css">
+    <link rel="stylesheet" href="/templates/login/css/style.css">
     <!-- Main css -->
     
-    <link rel="stylesheet" href="http://localhost/Motel/public/templates/motel/css/bootstrap.css">
-    <link rel="stylesheet" href="http://localhost/Motel/public/templates/motel/css/animate.css">
-    <link rel="stylesheet" href="http://localhost/Motel/public/templates/motel/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="/templates/motel/css/bootstrap.css">
+    <link rel="stylesheet" href="/templates/motel/css/animate.css">
+    <link rel="stylesheet" href="/templates/motel/css/owl.carousel.min.css">
 
-    <link rel="stylesheet" href="http://localhost/Motel/public/templates/motel/fonts/ionicons/css/ionicons.min.css">
-    <link rel="stylesheet" href="http://localhost/Motel/public/templates/motel/fonts/fontawesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="http://localhost/Motel/public/templates/motel/css/magnific-popup.css">
+    <link rel="stylesheet" href="/templates/motel/fonts/ionicons/css/ionicons.min.css">
+    <link rel="stylesheet" href="/templates/motel/fonts/fontawesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/templates/motel/css/magnific-popup.css">
 
     <!-- Theme Style -->
-    <link rel="stylesheet" href="http://localhost/Motel/public/templates/motel/css/style.css">
-    <link href="http://localhost/Motel/public/templates/admin/css/fileupload.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/templates/motel/css/style.css">
+    <link href="/templates/admin/css/fileupload.css" rel="stylesheet" />
     <link rel='stylesheet prefetch' href='https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css'>
     
     <style>

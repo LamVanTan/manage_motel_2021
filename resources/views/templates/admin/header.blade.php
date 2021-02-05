@@ -74,8 +74,8 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <!-- Brand -->
-      <a class="navbar-brand pt-0" href="/public/templates/admin/index.html">
-        <img src="/public/templates/admin/img/brand/blue.png" class="navbar-brand-img" alt="...">
+      <a class="navbar-brand pt-0" href="/templates/admin/index.html">
+        <img src="/templates/admin/img/brand/blue.png" class="navbar-brand-img" alt="...">
         <b style="display: block;color:slateblue;font-size:14px">Nơi dừng chân lý tưởng</b>
       </a>
       
@@ -122,7 +122,7 @@
             <a class="nav-link pr-0" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <div class="media align-items-center">
                 <span class="avatar avatar-sm rounded-circle">
-                  <img alt="Image placeholder" src="http://localhost/Motel/public/templates/admin/img/theme/team-4-800x800.jpg">
+                  <img alt="Image placeholder" src="/templates/admin/img/theme/team-4-800x800.jpg">
                 </span>
                 <div class="media-body ml-2 d-none d-lg-block">
                   <span class="mb-0 text-sm  font-weight-bold">@if(Auth::check()) {{Auth::user()->email}} @endif</span>

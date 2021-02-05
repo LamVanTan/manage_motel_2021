@@ -42,23 +42,23 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     
     <!-- loader -->
     <div id="loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#f4b214"/></svg></div>
-    <script src="http://localhost/Motel/public/templates/motel/js/jquery-3.5.1.js"></script>
-    <script src="http://localhost/Motel/public/templates/login/js/jquery-3.3.1.min.js"></script>
-    <script src="http://localhost/Motel/public/templates/login/js/popper.min.js"></script>
-    <script src="http://localhost/Motel/public/templates/login/js/bootstrap.min.js"></script>
-    <script src="http://localhost/Motel/public/templates/login/js/main.js"></script>
-    <script defer src="http://localhost/Motel/public/templates/motel/fontawesome/js/all.js"></script>
+    <script src="/templates/motel/js/jquery-3.5.1.js"></script>
+    <script src="/templates/login/js/jquery-3.3.1.min.js"></script>
+    <script src="/templates/login/js/popper.min.js"></script>
+    <script src="/templates/login/js/bootstrap.min.js"></script>
+    <script src="/templates/login/js/main.js"></script>
+    <script defer src="/templates/motel/fontawesome/js/all.js"></script>
     <!-- <script src="http://localhost/Motel/public/templates/motel/js/jquery-3.2.1.min.js"></script> -->
-    <script src="http://localhost/Motel/public/templates/motel/js/jquery-migrate-3.0.0.js"></script>
-    <script src="http://localhost/Motel/public/templates/motel/js/popper.min.js"></script>
-    <script src="http://localhost/Motel/public/templates/motel/js/bootstrap.min.js"></script>
-    <script src="http://localhost/Motel/public/templates/motel/js/owl.carousel.min.js"></script>
-    <script src="http://localhost/Motel/public/templates/motel/js/jquery.waypoints.min.js"></script>
-    <script src="http://localhost/Motel/public/templates/motel/js/jquery.stellar.min.js"></script>
-    <script src="http://localhost/Motel/public/templates/motel/js/jquery.magnific-popup.min.js"></script>
-    <script src="http://localhost/Motel/public/templates/motel/js/magnific-popup-options.js"></script>
-    <script src="http://localhost/Motel/public/templates/motel/js/main.js"></script>
-    <script src="http://localhost/Motel/public/templates/admin/js/customs.js"></script>
+    <script src="/templates/motel/js/jquery-migrate-3.0.0.js"></script>
+    <script src="/templates/motel/js/popper.min.js"></script>
+    <script src="/templates/motel/js/bootstrap.min.js"></script>
+    <script src="/templates/motel/js/owl.carousel.min.js"></script>
+    <script src="/templates/motel/js/jquery.waypoints.min.js"></script>
+    <script src="/templates/motel/js/jquery.stellar.min.js"></script>
+    <script src="/templates/motel/js/jquery.magnific-popup.min.js"></script>
+    <script src="/templates/motel/js/magnific-popup-options.js"></script>
+    <script src="/templates/motel/js/main.js"></script>
+    <script src="/templates/admin/js/customs.js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   </body>
 </html>
