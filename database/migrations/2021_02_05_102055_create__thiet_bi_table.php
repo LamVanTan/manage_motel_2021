@@ -17,6 +17,7 @@ class CreateThietBiTable extends Migration
             $table->increments('id_service');
             $table->string('name_service');
             $table->integer('status_service');
+            $table->integer('price_service');
             $table->integer('MaTaiKhoan')->unsigned();
             $table->foreign('MaTaiKhoan')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
         });
