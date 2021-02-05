@@ -1,4 +1,4 @@
-@extends('templates.motel.master')
+{{-- @extends('templates.motel.master')
 @section('main-content')
 <!-- @php 
 	  if(Session::has('msg')){
@@ -16,7 +16,7 @@
         </div>
 
       </div>
-    </section>
+    </section> --}}
     <!-- END section -->
 
     {{-- <section class="site-section bg-light pt-4">
@@ -68,7 +68,7 @@
         </div>
       </div>
     </section> --}}
-  <script>
+  {{-- <script>
     var myVar = setInterval(myTimer, 1000);
     function myTimer() {
       var d = new Date();
@@ -76,6 +76,6 @@
       document.getElementById("demo").innerHTML = t;
     }
 
-  </script>
+  </script> --}}
     <!-- END section -->
-@endsection
+{{-- @endsection --}}
