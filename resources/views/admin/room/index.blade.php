@@ -64,7 +64,7 @@
                         $pin = "btn btn-success btn-sm";
                       }
 
-                      $adminImages = 'http://localhost/Motel/storage/app/public/files';
+                      $adminImages = '/storage/app/public/files';
                       
                   @endphp
                     
