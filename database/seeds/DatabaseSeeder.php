@@ -11,7 +11,8 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        $this->call(DatabaseSeederRoom::class);
+        $this->call(DatabaseSeederFloor::class);
+        $this->call(DatabaseSeederRoomType::class);
     }
 }
 
