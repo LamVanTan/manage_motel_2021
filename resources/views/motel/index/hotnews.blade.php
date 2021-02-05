@@ -1,4 +1,4 @@
-@foreach($getListRoomsPin as $itemRoomsPin)
+{{-- @foreach($getListRoomsPin as $itemRoomsPin)
 @php
   $ngayHetHanPin = strtotime($itemRoomsPin->ngayHetHanPin); 
   $slug = Str::slug($itemRoomsPin->name_room);
@@ -71,4 +71,4 @@ function myTimer() {
 
 </script>
 
-@endforeach
+@endforeach --}}

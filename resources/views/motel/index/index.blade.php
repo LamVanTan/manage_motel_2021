@@ -1,4 +1,4 @@
-@extends('templates.motel.master')
+{{-- @extends('templates.motel.master')
 @section('main-content')
 <!-- @php 
 	  if(Session::has('msg')){
@@ -78,4 +78,4 @@
 
   </script>
     <!-- END section -->
-@endsection
+@endsection --}}
