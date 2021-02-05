@@ -81,7 +81,7 @@ class Room extends Model
     public function getListRoomsPin(){
          return Room::where('status_room', 1)
          ->where('condition_room', 0)
-         ->where('PinRooms', 1)
+         ->where('pinRooms', 1)
          ->orderBy('ngayHetHanPin', 'desc')
          ->get();
     }
@@ -89,7 +89,7 @@ class Room extends Model
     public function getListRooms(){
         return Room::where('status_room', 1)
         ->where('condition_room', 0)
-        ->where('PinRooms', 2)
+        ->where('pinRooms', 2)
         ->orderBy('ngayHetHanPin', 'desc')
         ->get();
    }
@@ -97,7 +97,7 @@ class Room extends Model
    public function getListRoomUser($idRoom){
         return Room::where('status_room', 1)
         ->where('condition_room', 0)
-        ->where('PinRooms', '<>', 0)
+        ->where('pinRooms', '<>', 0)
         ->where('id_room','<>', $idRoom)
         ->orderBy('ngayHetHanPin', 'desc')
         ->limit(3)

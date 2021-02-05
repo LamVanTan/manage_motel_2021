@@ -73,7 +73,7 @@ class AdminRoomController extends Controller
             'chiSoDienBanDau' => $soDien,
             'chiSoNuocBanDau'  => $soNuoc,
             'MaTaiKhoan'    =>  $idUser,
-            'PinRooms'  => 0
+            'pinRooms'  => 0
         ]; 
         // kiểm tra có files sẽ xử lý
 		if($request->hasFile('photos')) {
@@ -306,7 +306,7 @@ class AdminRoomController extends Controller
                 $ngayHienTai = Carbon::now();
                 $ngayHetHan = $ngayHienTai->addDay(3);
                 $data = [
-                    'PinRooms'  =>$pinRooms,
+                    'pinRooms'  =>$pinRooms,
                     'ngayHetHanPin' => $ngayHetHan
                 ];  
                 $result = $this->room->editItemRoom($data,$idRoom); 
