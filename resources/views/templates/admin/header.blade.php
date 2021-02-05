@@ -9,16 +9,16 @@
   </title>
   <!-- Favicon -->
   
-  <link href="http://localhost/Motel/public/templates/admin/img/brand/favicon.ico" rel="icon" type="image/png">
+  <link href="/public/templates/admin/img/brand/favicon.ico" rel="icon" type="image/png">
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
   <!-- Icons -->
-  <link href="http://localhost/Motel/public/templates/admin/js/plugins/nucleo/css/nucleo.css" rel="stylesheet" />
-  <link href="http://localhost/Motel/public/templates/admin/js/plugins/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet" />
+  <link href="/public/templates/admin/js/plugins/nucleo/css/nucleo.css" rel="stylesheet" />
+  <link href="/public/templates/admin/js/plugins/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet" />
   <!-- CSS Files -->
-  <link href="http://localhost/Motel/public/templates/admin/css/argon-dashboard.css?v=1.1.2" rel="stylesheet" />
-  <link href="http://localhost/Motel/public/templates/admin/css/customs.css" rel="stylesheet" />
-  <link href="http://localhost/Motel/public/templates/admin/css/fileupload.css" rel="stylesheet" />
+  <link href="/public/templates/admin/css/argon-dashboard.css?v=1.1.2" rel="stylesheet" />
+  <link href="/public/templates/admin/css/customs.css" rel="stylesheet" />
+  <link href="/public/templates/admin/css/fileupload.css" rel="stylesheet" />
   {{-- ChartScript --}}
   <script src="https://code.highcharts.com/highcharts.js"></script>
   <script src="https://code.highcharts.com/modules/data.js"></script>
@@ -74,8 +74,8 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <!-- Brand -->
-      <a class="navbar-brand pt-0" href="http://localhost/Motel/public/templates/admin/index.html">
-        <img src="http://localhost/Motel/public/templates/admin/img/brand/blue.png" class="navbar-brand-img" alt="...">
+      <a class="navbar-brand pt-0" href="/public/templates/admin/index.html">
+        <img src="/public/templates/admin/img/brand/blue.png" class="navbar-brand-img" alt="...">
         <b style="display: block;color:slateblue;font-size:14px">Nơi dừng chân lý tưởng</b>
       </a>
       

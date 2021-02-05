@@ -14,6 +14,7 @@ use App\Models\PaymentRoom;
 use App\Models\Payment;
 use App\Models\BankUser;
 use App\User;
+use URL;
 class AppServiceProvider extends ServiceProvider
 {
     /**
@@ -36,6 +37,7 @@ class AppServiceProvider extends ServiceProvider
         View::share('urlAdmin',getenv('URL_ADMIN'));
         View::share('adminImages', \getenv('ADMIN_IMAGES'));
         View::share('adminUrl', getenv('LOGIN'));
+        URL::forceScheme('https');
         //share room
         view()->composer('*', function ($view) 
         {
