@@ -35,6 +35,7 @@ class RechargeController extends Controller
         }else{
             $soDuTaiKhoan = $taiKhoan->bank->soDuTaiKhoan;
             $tienNapVao = $tienNapVao + $soDuTaiKhoan;
+            $ngayNap = Carbon::now('Asia/Ho_Chi_Minh');
             $data = [
                 'soDuTaiKhoan' => $tienNapVao,
                 'id_user'      => $idUser,
@@ -142,6 +143,7 @@ class RechargeController extends Controller
                 }else{
                     $soDuTaiKhoan = $taiKhoan->bank->soDuTaiKhoan;
                     $tienNapVao = $tienNapVao + $soDuTaiKhoan;
+                    $ngayNap = Carbon::now('Asia/Ho_Chi_Minh');
                     $data = [
                         'soDuTaiKhoan' => $tienNapVao,
                         'id_user'      => $idUser,
