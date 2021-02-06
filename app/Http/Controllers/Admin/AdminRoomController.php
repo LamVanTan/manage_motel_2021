@@ -115,7 +115,7 @@ class AdminRoomController extends Controller
                     $explodeFile = explode('.',$nameFile);//tach chuoi anh
                     $ext = end($explodeFile);//lay duoc duoi .jpg
                     $filename = 'motel-'.time().$dem++.'.'.$ext;
-                    $photo->move(base_path('public/templates'),$filename);
+                    $photo->move(base_path('public/files'),$filename);
                     $data = [
                                 'name_images'=>$filename,
                                 'id_room'=>$idRoom->id_room
@@ -222,7 +222,7 @@ class AdminRoomController extends Controller
                     $explodeFile = explode('.',$nameFile);//tach chuoi anh
                     $ext = end($explodeFile);//lay duoc duoi .jpg
                     $filename = 'motel-'.time().$dem++.'.'.$ext;
-                    $photo->move(base_path('public/templates'),$filename);
+                    $photo->move(base_path('public/files'),$filename);
                     $data = [
                                 'name_images'=>$filename,
                                 'id_room'=>$idRoom

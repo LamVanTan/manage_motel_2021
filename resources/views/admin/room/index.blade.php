@@ -64,7 +64,7 @@
                         $pin = "btn btn-success btn-sm";
                       }
 
-                      $adminImages = '/templates';
+                     
                       
                   @endphp
                     
@@ -84,7 +84,7 @@
                         @php $i = 1; @endphp
                         @foreach($itemRoom->images as $img)
                           <div id="slide-{{$idRoom}}-{{$i}}">
-                            <img class="rounded" src="{{$adminImages}}/{{$img->name_images}}" style="width: 165px; height:120px;" >
+                            <img class="rounded" src="/files/{{$img->name_images}}" style="width: 165px; height:120px;" >
                           </div>
                         @php $i++; @endphp
                         @endforeach
