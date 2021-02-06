@@ -44,9 +44,14 @@ class OrderRoom extends Model
     }
    
     public function addItemOrder($data){
-        return DB::table('ThuePhong')->insertGetId($data);
+        return DB::table('ThuePhong')->insert($data);
     }
-    
+
+    public function getIdOrder($idUser){
+        return DB::table('ThuePhong')
+        ->where('MaTaiKhoan', $idUser)
+        ->orderBy('id_order')->first();
+    }
     //admin order-edit-status
     public function editItemOrder($data,$idOrder){
         return DB::table('ThuePhong')->where('id_order', $idOrder)->update($data);

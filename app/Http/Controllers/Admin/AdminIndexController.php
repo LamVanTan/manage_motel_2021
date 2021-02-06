@@ -256,6 +256,7 @@ class AdminIndexController extends Controller
                     ];
                     //dd($data);
                     $itemCustomer = $this->customer->addItemCustomer($data);
+                    $idCustomer = $this->customer->getIdCustomer($idUser);
                     if(isset($request['fileCMND1'])  && isset($request['fileCMND2'])) {
                         $allowedFileExtension=['jpg','png'];
                         $fileCMND1 = $request['fileCMND1'];
@@ -283,7 +284,7 @@ class AdminIndexController extends Controller
                                 $photo->move(base_path('storage/app/public/filesCustomer/'),$filename);
                                 $data = [
                                             'name_images'=>$filename,
-                                            'id_customer'=>$itemCustomer
+                                            'id_customer'=>$idCustomer->id_customer
                                         ];
                                 $imagesProducts = $this->images->addImagesRoom($data);
                             }
@@ -298,7 +299,7 @@ class AdminIndexController extends Controller
                         'date_start'    => $dateStart,
                         'date_end'      => $dateEnd,
                         'id_room'       => $idRoom,
-                        'id_customer'   => $itemCustomer,
+                        'id_customer'   => $idCustomer->id_customer,
                         'price_room'    => $priceRoom,
                         'deposits'      => $deposits_room,
                         'money_last'    => $priceLast,
@@ -307,11 +308,12 @@ class AdminIndexController extends Controller
 
                     ];
                     $addItemOrder = $this->order->addItemOrder($dataOrder);
+                    $idOrder = $this->order->getIdOrder($idUser);
                     if($addItemOrder){
                         $getItemRoom = $this->room->getItemEditRoom($idRoom);
                         foreach($getItemRoom->serviceRoom as $item) {
                             $dataOrderDetail = [
-                                'id_order' => $addItemOrder,
+                                'id_order' => $idOrder->id_order,
                                 'id_service'  => $item->id_service
                             ];
                             $addItemOrderDetail = $this->orderDetail->addItemOrderDetail($dataOrderDetail);

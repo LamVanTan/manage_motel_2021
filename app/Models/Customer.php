@@ -20,8 +20,16 @@ class Customer extends Model
 
     ///admin-add-itemcustomer
     public function addItemCustomer($data){
-        return DB::table('KhachHang')->insertGetId($data);
+        return DB::table('KhachHang')->insert($data);
     }
+
+    public function getIdCustomer($idUser){
+        return DB::table('KhachHang')
+        ->where('MaTaiKhoan',$idUser)
+        ->orderBy('id_customer','desc')
+        ->first();
+    }
+
 
     public function getList(){
         return Customer::all();
