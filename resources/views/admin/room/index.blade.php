@@ -64,7 +64,7 @@
                         $pin = "btn btn-success btn-sm";
                       }
 
-                      $adminImages = '/public/templates';
+                      $adminImages = '/templates';
                       
                   @endphp
                     
