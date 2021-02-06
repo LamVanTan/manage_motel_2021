@@ -59,11 +59,11 @@ class AdminRoomController extends Controller
         if(Auth::check()){
             $idUser = Auth::user()->id;
         }
-        $data = [
+        $dataRoom = [
             'name_room' => $nameRoom,
             'price_room' => $priceRoom,
             'area_room' =>  $areaRoom,
-            'person_quantity'  =>   $quantityPerson,
+            'person_quantity'  => $quantityPerson,
             'id_floor' => $floorRoom,
             'id_roomtype' => $roomType,
             'status_room' => $statusRoom,
@@ -96,7 +96,7 @@ class AdminRoomController extends Controller
 			// nếu không có file nào vi phạm validate thì tiến hành lưu DB
 			if($exe_flg) {
                 // lưu product
-				$itemRoom = $this->room->addItemRoom($data);
+				$itemRoom = $this->room->addItemRoom($dataRoom);
                // duyệt từng ảnh và thực hiện lưu
                 if($serviceRoom){
                     foreach($serviceRoom as $key => $itemService){
@@ -127,6 +127,20 @@ class AdminRoomController extends Controller
             else {
 				return redirect()->route('admin.room.add')->with('msg','Sai định dạng file, File phải có đuôi JPG, PNG');
 			}	
+        }else{
+            $itemRoom = $this->room->addItemRoom($dataRoom);
+               // duyệt từng ảnh và thực hiện lưu
+                if($serviceRoom){
+                    foreach($serviceRoom as $key => $itemService){
+                        $data = [
+                            'id_service' => $itemService,
+                            'id_room' =>$itemRoom,
+                            'status_service_room' => 1
+                        ];
+                        $service_room = $this->serviceRoom->addServiceRoom($data);
+                    }
+                    return redirect()->route('admin.room.index')->with('msg','Thêm Thành Công');
+                }
         }
     }
 

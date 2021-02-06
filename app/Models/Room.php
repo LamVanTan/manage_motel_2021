@@ -37,8 +37,6 @@ class Room extends Model
     }
 
     //end model-ORM
-    
-
 
     //admin-room-index
     public function getListRoom($idUser){
