@@ -47,7 +47,10 @@ class Room extends Model
 
     //admin-room-add
     public function addItemRoom($data){
-        return DB::table('Phong')->insert($data)->lastInsertId();;
+        return DB::table('Phong')->insert($data);
+    }
+    public function getIdRoomFirst($idUser){
+        return DB::table('Phong')->where('MaTaiKhoan', $idUser)->orderBy('id_room','desc')->first();
     }
 
     //admin-room-getItemEdit

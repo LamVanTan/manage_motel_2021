@@ -97,12 +97,13 @@ class AdminRoomController extends Controller
 			if($exe_flg) {
                 // lưu product
 				$itemRoom = $this->room->addItemRoom($dataRoom);
+                $idRoom = $this->room->getIdRoomFirst($idUser);
                // duyệt từng ảnh và thực hiện lưu
                 if($serviceRoom){
                     foreach($serviceRoom as $key => $itemService){
                         $data = [
                             'id_service' => $itemService,
-                            'id_room' =>$itemRoom,
+                            'id_room' =>$idRoom->id_room,
                             'status_service_room' => 1
                         ];
                         $service_room = $this->serviceRoom->addServiceRoom($data);
@@ -117,7 +118,7 @@ class AdminRoomController extends Controller
                     $photo->move(base_path('public/templates'),$filename);
                     $data = [
                                 'name_images'=>$filename,
-                                'id_room'=>$itemRoom
+                                'id_room'=>$idRoom->id_room
                             ];
 					$imagesProducts = $this->images->addImagesRoom($data);
                 }
@@ -129,12 +130,13 @@ class AdminRoomController extends Controller
 			}	
         }else{
             $itemRoom = $this->room->addItemRoom($dataRoom);
+            $idRoom = $this->room->getIdRoomFirst($idUser);
                // duyệt từng ảnh và thực hiện lưu
                 if($serviceRoom){
                     foreach($serviceRoom as $key => $itemService){
                         $data = [
                             'id_service' => $itemService,
-                            'id_room' =>$itemRoom,
+                            'id_room' =>$idRoom->id_room,
                             'status_service_room' => 1
                         ];
                         $service_room = $this->serviceRoom->addServiceRoom($data);
