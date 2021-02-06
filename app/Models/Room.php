@@ -47,7 +47,7 @@ class Room extends Model
 
     //admin-room-add
     public function addItemRoom($data){
-        return DB::table('Phong')->insertGetId($data);
+        return DB::table('Phong')->insert($data)->lastInsertId();;
     }
 
     //admin-room-getItemEdit
