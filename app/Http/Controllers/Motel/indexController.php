@@ -14,15 +14,20 @@ class indexController extends Controller
     }
     public function index(){
         //pin-room
-        return redirect()->route('motel.auth.login');
+        $getListRoomsPin = $this->room->getListRoomsPin();
+        $getListUser = $this->user->getListUser();
+        //room-
+        $getListRooms = $this->room->getListRooms();
+        return view('motel.index.index', \compact('getListRoomsPin','getListUser','getListRooms'));
     }
+    // return redirect()->route('motel.auth.login');
 
-    // public function timePinRooms(Request $request){
-    //     $idRoom = $request->idRoom;
-    //     $data = [
-    //         'PinRooms' => 2
-    //     ];
-    //     $updateItemPinRoom = $this->room->editItemRoom($data,$idRoom);
-    //     return view('motel.index.hotnews');
-    // }
+    public function timePinRooms(Request $request){
+        $idRoom = $request->idRoom;
+        $data = [
+            'PinRooms' => 2
+        ];
+        $updateItemPinRoom = $this->room->editItemRoom($data,$idRoom);
+        return view('motel.index.hotnews');
+    }
 }
