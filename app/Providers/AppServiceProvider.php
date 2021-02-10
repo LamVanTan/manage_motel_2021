@@ -37,7 +37,7 @@ class AppServiceProvider extends ServiceProvider
         View::share('urlAdmin',getenv('URL_ADMIN'));
         View::share('adminImages', \getenv('ADMIN_IMAGES'));
         View::share('adminUrl', getenv('LOGIN'));
-        //URL::forceScheme('https');
+        URL::forceScheme('https');
         //share room
         view()->composer('*', function ($view) 
         {
